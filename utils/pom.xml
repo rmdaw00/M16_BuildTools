@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.builders</groupId>
+  <artifactId>utils</artifactId>
+  <version>0.0.1</version>
+  <packaging>jar</packaging>
+  
+  
+   <properties>
+  	<builder.version>0.0.1</builder.version>
+  	
+  	<java.version>11</java.version>
+  	<junit.version>5.8.0-RC1</junit.version>
+  	
+  	<maven.compiler.version>3.8.0</maven.compiler.version>
+  	<maven.site.version>3.7.1</maven.site.version>
+  	<maven.surefire.version>3.0.0-M3</maven.surefire.version>
+  </properties>
+  
+  
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <target>${java.version}</target>
+                    <source>${java.version}</source>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${maven.site.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>${maven.surefire.version}</version>
+            </plugin>
+        </plugins>
+    </reporting>
+  
+    <dependencies>
+
+   			
+   			
+   			<dependency>
+			  <groupId>org.junit.jupiter</groupId>
+			  <artifactId>junit-jupiter-engine</artifactId>
+			  <version>${junit.version}</version>
+			  <scope>test</scope>
+			</dependency>
+			 	
+			<dependency>
+			  <groupId>org.junit.jupiter</groupId>
+			  <artifactId>junit-jupiter-params</artifactId>
+			  <version>${junit.version}</version>
+			  <scope>test</scope>
+			</dependency>
+			
+			<dependency>
+			  <groupId>org.junit.jupiter</groupId>
+			  <artifactId>junit-jupiter-api</artifactId>
+			  <version>${junit.version}</version>
+			  <scope>test</scope>
+			</dependency>		
+  </dependencies>
+</project>
+
